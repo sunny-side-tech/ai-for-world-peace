@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "etf-arb"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{from = "src", include = "world_peace"}]
+
+
+[tool.poetry.dependencies]
+python =  ">=3.11,<3.13"
+websockets = "^11.0.3"
+httpx = "^0.25.0"
+polygon = "^1.1.2"
+pydantic = "^2.4.2"
+numpy = "^1.26.0"
+jupyter = "^1.0.0"
+pytest = "^7.4.2"
+fastapi = "^0.103.2"
+uvicorn = "^0.23.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

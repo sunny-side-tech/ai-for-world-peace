@@ -4,3 +4,5 @@
 
 .env
 scratch.*
+__pycache__
+**.pyc
