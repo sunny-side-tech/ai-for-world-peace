@@ -1,9 +1,10 @@
-from pydantic import BaseModel
+from pydantic_settings import BaseSettings
 
 
-class ServiceConfig(BaseModel):
-    api_key: str
+class ServiceConfig(BaseSettings):
+    marketstack_api_key: str
+    polygon_api_key: str
 
     class Config:
-        env_prefix = "service"
+        env_prefix = "service_"
         env_file = ".env"
