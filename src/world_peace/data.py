@@ -4,6 +4,9 @@ from pandas import DataFrame, read_csv, concat
 from polygon.stocks import StocksClient
 from world_peace.config import ServiceConfig
 
+
+# untested scratch I wrote while drunk, can be ignored
+
 config = ServiceConfig()
 print(config)
 client = StocksClient(api_key=config.polygon_api_key)
