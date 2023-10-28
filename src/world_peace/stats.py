@@ -26,15 +26,8 @@ class PortfolioStatistics:
     def calmar_ratio(self, *args, **kwargs):
         raise NotImplementedError()
 
-
     def maximum_drawdown(self, *args, **kwargs):
         raise NotImplementedError()
 
-
     def maximum_drawdown_duration(self, *args, **kwargs):
         raise NotImplementedError()
-
-
-if __name__ == "__main__":
-    print(1/1.41)
-    # print(mean([0, 2.0]))
