@@ -11,7 +11,7 @@ class Position(BaseModel):
     market_value: Decimal
     notional: int
 
-    def from_cash(self ,amount: Decimal) -> "Position":
+    def from_cash(self, amount: Decimal) -> "Position":
         # without trading anything our cash has 0 returns
         # this position marks the initial portfolio state upon instantiation
         return Position(
@@ -20,7 +20,7 @@ class Position(BaseModel):
             start_idx=0,
             notional=amount,
             market_value=amount,
-            time_idx=0
+            time_idx=0,
         )
 
 
