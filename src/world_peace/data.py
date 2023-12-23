@@ -6,7 +6,6 @@ from world_peace.config import ServiceConfig
 # untested scratch I wrote while drunk, can be ignored
 
 config = ServiceConfig()
-print(config)
 client = StocksClient(api_key=config.polygon_api_key)
 
 aggy_daddy = client.get_aggregate_bars(
@@ -48,10 +47,6 @@ def get_positions(bar_list: list[DataFrame], initial_size: int) -> list[DataFram
 
 positions = get_positions(bar_list, 10000)
 
-for p in positions:
-    print(p)
-    print()
-
 
 def get_portfolio(positions: list[DataFrame]) -> DataFrame:
     all_positions = [p[f"{p['Ticker'].iloc[0]} Position"] for p in positions]
@@ -80,9 +75,6 @@ def get_annualized_sharp_ratio(returns: DataFrame) -> DataFrame:
     sharp_ratio = returns["Daily Return"].mean() / portfolio["Daily Return"].std()
     return (252**0.5) * sharp_ratio
 
-
-print("portfolio")
-print(portfolio)
 
 print(get_sharp_ratio(returns))
 print(get_annualized_sharp_ratio(returns))

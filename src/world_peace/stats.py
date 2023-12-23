@@ -18,8 +18,6 @@ class PortfolioStatistics:
     def compound_annual_growth_rate(self):
         current_value = sum(a.market_value for a in self.portfolio.positions)
         starting_value = self.historical_portfolios[0].total_market_value
-        print(current_value / starting_value, self.historical_portfolios)
-        print("time_idx", self.portfolio.time_idx)
         cagr = (current_value / starting_value) ** (
             Decimal(1) / Decimal(self.portfolio.time_idx)
         ) - 1
